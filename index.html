@@ -255,6 +255,12 @@
         .animate-fade-in {
             animation: fadeIn 1s ease-in-out;
         }
+        .mobile-image{
+            display: none;
+        }
+        .desktop-image{
+            display: block;
+        }
         @media (max-width: 768px) {
             .mobile-hero{
               padding: 0;
@@ -264,9 +270,12 @@
 
             }
             .mobile-hero img{
-                    box-shadow: none;
-    border: none;
-    border-radius: 0;
+                           box-shadow: none;
+        border: none;
+        border-radius: 0;
+        height: fit-content;
+        margin-top: -60px;
+
             }
             .mobile-hero .book-amt{
              padding: 4px 10px;
@@ -284,6 +293,14 @@
         }
         .pt-28{
             padding-top: 5rem !important;
+        }
+        .mobile-image{
+            display: block;
+            height: 256px;
+            overflow: hidden;
+        }
+        .desktop-image{
+            display: none;
         }
     }
     </style>
@@ -339,8 +356,13 @@
                 <!-- Image first on mobile -->
                 <div class="hero-image md:w-1/2 flex justify-center order-1 md:order-2 mobile-hero">
                     <div class="relative">
-                        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/mvkdtcvijm52azr/generated-images/a3fDkTloUoEIhusToW1rx.png" alt="L&T Green Reserve Luxury Apartments with Golf Course View" class="rounded-xl shadow-2xl w-full max-w-lg border-4 border-luxury-gold/30">
-                        <div class="absolute -bottom-5 -right-5 bg-white text-deep-emerald p-4 rounded-xl shadow-lg floating-button gold-border book-amt">
+                        
+                        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/mvkdtcvijm52azr/generated-images/a3fDkTloUoEIhusToW1rx.png" alt="L&T Green Reserve Luxury Apartments with Golf Course View" class="desktop-image rounded-xl shadow-2xl w-full max-w-lg border-4 border-luxury-gold/30">
+                        <div class="mobile-image">
+                           <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1200/https://cdn.gamma.app/mvkdtcvijm52azr/generated-images/rJpG_SWMcFDgRTD1IHCiB.png" alt="L&T Green Reserve Luxury Apartments with Golf Course View" class="rounded-xl shadow-2xl w-full max-w-lg border-4 border-luxury-gold/30">
+
+                        </div>
+                        <div class="absolute  bg-white text-deep-emerald p-4 rounded-xl shadow-lg  gold-border book-amt">
                             <div class="text-center">
                                 <div class="font-bold text-xl">₹10 Lakhs*</div>
                                 <div class="text-sm">Booking Amount</div>
@@ -1059,7 +1081,7 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/919999999999" class="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl hover:bg-[#128C7E] transition-all duration-300 flex items-center justify-center w-16 h-16 group animate-bounce">
+        <a href="https://wa.me/919999999999" class="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl hover:bg-[#128C7E] transition-all duration-300 flex items-center justify-center w-16 h-16 group ">
             <i class="fab fa-whatsapp text-2xl"></i>
             <span class="absolute -right-2 -top-2 bg-luxury-gold text-white text-xs rounded-full w-5 h-5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">1</span>
         </a>
