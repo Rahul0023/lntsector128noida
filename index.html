@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&T Green Reserve: Ultra-Luxury Golf View Residences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'luxury-gold': '#D4AF37',
+                        'deep-emerald': '#0F5132',
+                        'soft-cream': '#F8F4E9',
+                        'charcoal': '#2C2C2C',
+                        'light-gold': '#F3E5AB',
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'elegant': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slow-pulse': 'pulse 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .elegant-text {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15,81,50,0.85) 0%, rgba(0,40,20,0.95) 100%);
+        }
+        
+        .luxury-card {
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        
+        .luxury-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .amenities-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .gold-border {
+            border: 1px solid #D4AF37;
+        }
+        
+        .gold-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        .luxury-button {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8A2D 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .luxury-button:hover {
+            background: linear-gradient(135deg, #AA8A2D 0%, #8A6F28 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .secondary-button {
+            background: transparent;
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        
+        .secondary-button:hover {
+            background: #D4AF37;
+            color: white;
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover:after {
+            width: 80%;
+        }
+        
+        .luxury-badge {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8A2D 100%);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-icon {
+            color: #D4AF37;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .gold-overlay {
+            position: relative;
+        }
+        
+        .gold-overlay:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+            pointer-events: none;
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-charcoal bg-soft-cream">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 border-b border-luxury-gold/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <img src="https://www.lntrealty.com/wp-content/themes/lntrealty/assets/images/brand-logo-desktop.webp" alt="L&T Realty Logo" class="h-12">
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-2">
+                        <a href="#overview" class="nav-link text-gray-700 hover:text-deep-emerald">Overview</a>
+                        <a href="#residences" class="nav-link text-gray-700 hover:text-deep-emerald">Residences</a>
+                        <a href="#amenities" class="nav-link text-gray-700 hover:text-deep-emerald">Amenities</a>
+                        <a href="#location" class="nav-link text-gray-700 hover:text-deep-emerald">Location</a>
+                        <a href="#gallery" class="nav-link text-gray-700 hover:text-deep-emerald">Gallery</a>
+                        <a href="#developer" class="nav-link text-gray-700 hover:text-deep-emerald">Developer</a>
+                        <a href="#contact" class="luxury-button text-white px-6 py-2 rounded-md font-medium ml-4">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none text-deep-emerald">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <a href="#overview" class="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-gray-100">Overview</a>
+            <a href="#residences" class="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-gray-100">Residences</a>
+            <a href="#amenities" class="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-gray-100">Amenities</a>
+            <a href="#location" class="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-gray-100">Location</a>
+            <a href="#gallery" class="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-gray-100">Gallery</a>
+            <a href="#developer" class="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-gray-100">Developer</a>
+            <a href="#contact" class="block px-4 py-3 text-sm luxury-button text-white font-medium">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden hero-gradient text-white pt-28 pb-24 md:pt-36 md:pb-32 gold-overlay">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[url('https://img.freepik.com/free-photo/dark-green-textured-background_24972-763.jpg')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
+            <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                    <div class="luxury-badge">PRE-LAUNCH OFFER</div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight text-shadow">L&T Green Reserve</h1>
+                    <h2 class="text-2xl md:text-3xl font-serif font-semibold mb-6 text-light-gold">Ultra-Luxury Golf View Residences</h2>
+                    <p class="text-lg mb-8 elegant-text">Experience unparalleled luxury at pre-launch prices. This is a limited-time opportunity to own your dream home overlooking a prestigious golf course.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="document.getElementById('siteVisitModal').classList.remove('hidden')" class="luxury-button px-8 py-4 rounded-md font-semibold text-center">Book a Site Visit</button>
+                        <a href="#prelaunch" class="secondary-button px-8 py-4 rounded-md font-semibold text-center">Pre-Launch Offers</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/mvkdtcvijm52azr/generated-images/a3fDkTloUoEIhusToW1rx.png" alt="L&T Green Reserve" class="rounded-xl shadow-2xl w-full max-w-lg border-4 border-luxury-gold/30">
+                        <div class="absolute -bottom-5 -right-5 bg-white text-deep-emerald p-4 rounded-xl shadow-lg floating-button gold-border">
+                            <div class="text-center">
+                                <div class="font-bold text-xl">₹10 Lakhs*</div>
+                                <div class="text-sm">Booking Amount</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Launch Offers -->
+    <section id="prelaunch" class="py-20 bg-gradient-to-b from-deep-emerald to-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold mb-4">Exclusive Pre-Launch Benefits</h2>
+                <div class="gold-divider my-4"></div>
+                <p class="mt-6 text-light-gold max-w-3xl mx-auto elegant-text">Secure your dream home today and enjoy these limited-time advantages before our official launch</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="luxury-card bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-luxury-gold/20">
+                    <div class="text-luxury-gold mb-6 text-center">
+                        <i class="fas fa-tag text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-center">Special Pricing</h3>
+                    <p class="text-gray-300 text-center mb-4">Save ₹2000-2500 per sq.ft. compared to launch price</p>
+                    <div class="text-center">
+                        <span class="inline-block bg-luxury-gold/20 text-luxury-gold text-sm px-3 py-1 rounded-full">Limited Units Only</span>
+                    </div>
+                </div>
+                
+                <div class="luxury-card bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-luxury-gold/20">
+                    <div class="text-luxury-gold mb-6 text-center">
+                        <i class="fas fa-gem text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-center">Priority Selection</h3>
+                    <p class="text-gray-300 text-center mb-4">First access to premium golf-facing units</p>
+                    <div class="text-center">
+                        <span class="inline-block bg-luxury-gold/20 text-luxury-gold text-sm px-3 py-1 rounded-full">Best Floors Available</span>
+                    </div>
+                </div>
+                
+                <div class="luxury-card bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-luxury-gold/20">
+                    <div class="text-luxury-gold mb-6 text-center">
+                        <i class="fas fa-calendar-star text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-center">Flexible Payments</h3>
+                    <p class="text-gray-300 text-center mb-4">20-70-10 payment plan with construction-linked installments</p>
+                    <div class="text-center">
+                        <span class="inline-block bg-luxury-gold/20 text-luxury-gold text-sm px-3 py-1 rounded-full">Lowest Booking Amount</span>
+                    </div>
+                </div>
+                
+                <div class="luxury-card bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-luxury-gold/20">
+                    <div class="text-luxury-gold mb-6 text-center">
+                        <i class="fas fa-percentage text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-center">Early Bird Discount</h3>
+                    <p class="text-gray-300 text-center mb-4">Additional 5% discount for first 20 bookings</p>
+                    <div class="text-center">
+                        <span class="inline-block bg-luxury-gold/20 text-luxury-gold text-sm px-3 py-1 rounded-full">Only ₹10 Lakhs Booking</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gradient-to-r from-luxury-gold to-light-gold text-deep-emerald p-10 rounded-2xl shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 opacity-10">
+                    <i class="fas fa-crown text-[200px]"></i>
+                </div>
+                <div class="md:flex items-center justify-between relative">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-3xl font-serif font-bold mb-4">Pre-Launch Window Closing Soon!</h3>
+                        <p class="text-deep-emerald font-medium">Book now with just ₹10 Lakhs and secure your dream home at pre-launch prices.</p>
+                    </div>
+                    <div class="md:w-1/3 text-center md:text-right">
+                        <a href="#contact" class="bg-deep-emerald text-white px-8 py-4 rounded-md font-semibold hover:bg-gray-900 transition duration-300 inline-block">Reserve Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <div class="inline-flex items-center bg-black/30 px-6 py-3 rounded-full border border-luxury-gold/30">
+                    <i class="fas fa-clock text-luxury-gold mr-3"></i>
+                    <span class="font-medium">Offer valid until: December 31, 2023</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Redefined -->
+    <section id="overview" class="py-20 bg-soft-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-charcoal mb-4">Crafting Timeless Elegance</h2>
+                <div class="gold-divider my-4"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto elegant-text">Where architectural brilliance meets unparalleled craftsmanship to create residences of distinction</p>
+            </div>
+            
+            <div class="md:flex items-center gap-16">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <div class="relative">
+                        <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/mvkdtcvijm52azr/generated-images/ML5DXo9fH6ETWXQe8qnaU.png" alt="Luxury Residence" class="rounded-2xl shadow-2xl w-full gold-border">
+                        <div class="absolute -inset-4 border border-luxury-gold/30 rounded-2xl z-[-1]"></div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-serif font-bold text-charcoal mb-6">Luxury Redefined in Every Detail</h2>
+                    <p class="text-lg text-gray-600 mb-8 elegant-text">L&T Green Reserve represents the pinnacle of sophisticated living, designed for those who accept nothing less than extraordinary.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-luxury-gold mt-1 mr-4">
+                                <i class="fas fa-drafting-compass fa-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal mb-1">Impeccable Craftsmanship</h4>
+                                <p class="text-gray-600">Premium Italian marble flooring and custom millwork</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-luxury-gold mt-1 mr-4">
+                                <i class="fas fa-utensils fa-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal mb-1">Gourmet Kitchens</h4>
+                                <p class="text-gray-600">Imported modular kitchens with premium appliances</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-luxury-gold mt-1 mr-4">
+                                <i class="fas fa-columns fa-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal mb-1">Panoramic Views</h4>
+                                <p class="text-gray-600">Floor-to-ceiling windows framing golf course vistas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-luxury-gold mt-1 mr-4">
+                                <i class="fas fa-lock fa-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal mb-1">Smart Living</h4>
+                                <p class="text-gray-600">Home automation and multi-tier security systems</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <a href="#residences" class="luxury-button text-white px-6 py-3 rounded-md font-semibold inline-flex items-center">
+                            Explore Residence Options
+                            <i class="fas fa-arrow-right ml-3"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Advantage -->
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-charcoal mb-4">Unmatched Location Advantage</h2>
+                <div class="gold-divider my-4"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto elegant-text">Strategically positioned for convenience, exclusivity, and appreciation potential</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="luxury-card bg-soft-cream p-8 rounded-xl text-center">
+                    <div class="text-luxury-gold mb-6">
+                        <i class="fas fa-road text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold mb-4 text-deep-emerald">Prime Connectivity</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Direct access to Noida Expressway</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>15-minute drive to Delhi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>20 minutes to Greater Noida</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Seamless connectivity to Jewar Airport corridor</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="luxury-card bg-soft-cream p-8 rounded-xl text-center">
+                    <div class="text-luxury-gold mb-6">
+                        <i class="fas fa-golf-ball text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold mb-4 text-deep-emerald">Golf Course Living</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Fronting the prestigious 18-hole Noida Golf Course</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Unobstructed verdant views</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Enhances property value</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Tranquil living environment</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="luxury-card bg-soft-cream p-8 rounded-xl text-center">
+                    <div class="text-luxury-gold mb-6">
+                        <i class="fas fa-city text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold mb-4 text-deep-emerald">Urban Conveniences</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Walking distance to DLF Mall of India</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Sector 18 market nearby</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Multi-specialty hospitals</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                            <span>Top educational institutions including Shriram School and Shiv Nadar University</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Residence Options -->
+    <section id="residences" class="py-20 bg-soft-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-charcoal mb-4">Residence Options & Floor Plans</h2>
+                <div class="gold-divider my-4"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto elegant-text">Exquisitely designed residences offering unparalleled luxury and comfort</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 3 BHK -->
+                <div class="luxury-card bg-white p-0 rounded-xl overflow-hidden group">
+                    <div class="bg-deep-emerald text-white p-6">
+                        <h3 class="text-2xl font-serif font-bold text-center">3 BHK Premium</h3>
+                        <p class="text-center text-light-gold">2850-3500 sq. ft.</p>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>3 luxurious bedrooms with en-suite bathrooms</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>Spacious living-dining area with golf views</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>Private balcony and servant quarters</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="luxury-button text-white px-8 py-3 rounded-md font-semibold w-full">Call for Pre-launch Offer</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4 BHK -->
+                <div class="luxury-card bg-white p-0 rounded-xl overflow-hidden group">
+                    <div class="bg-gradient-to-r from-deep-emerald to-luxury-gold text-white p-6">
+                        <h3 class="text-2xl font-serif font-bold text-center">4 BHK Signature</h3>
+                        <p class="text-center text-light-gold">3550-4200 sq. ft.</p>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>4 bedrooms with walk-in wardrobes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>Family lounge and entertainment area</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>Balconies with golf views and sitting decks</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="luxury-button text-white px-8 py-3 rounded-md font-semibold w-full">Call for Pre-launch Offer</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5 BHK -->
+                <div class="luxury-card bg-white p-0 rounded-xl overflow-hidden group">
+                    <div class="bg-luxury-gold text-deep-emerald p-6">
+                        <h3 class="text-2xl font-serif font-bold text-center">5 BHK Opulent</h3>
+                        <p class="text-center text-deep-emerald">5100-5700 sq. ft.</p>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>Opulent and luxurious living abodes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>Home theater and private terrace garden</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-luxury-gold mt-1 mr-3"></i>
+                                <span>Family lounge and servant quarters</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="bg-deep-emerald text-white px-8 py-3 rounded-md font-semibold w-full hover:bg-charcoal transition duration-300">Call for Pre-launch Offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-charcoal mb-4">Why Choose L&T Green Reserve</h2>
+                <div class="gold-divider my-4"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto elegant-text">Distinctive features that set our development apart as the premier luxury destination</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="luxury-card bg-soft-cream p-8 rounded-xl text-center">
+                    <div class="text-luxury-gold mb-6">
+                        <i class="fas fa-medal text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4">Legacy of Excellence</h3>
+                    <p class="text-gray-600">Developed by L&T Realty, bringing 80+ years of engineering excellence and timely delivery to create landmarks that stand the test of time.</p>
+                </div>
+                
+                <div class="luxury-card bg-soft-cream p-8 rounded-xl text-center">
+                    <div class="text-luxury-gold mb-6">
+                        <i class="fas fa-chart-line text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4">Investment Potential</h3>
+                    <p class="text-gray-600">Sector-128 has demonstrated consistent 12-15% annual appreciation, with golf-facing properties commanding 30% premium.</p>
+                </div>
+                
+                <div class="luxury-card bg-soft-cream p-8 rounded-xl text-center">
+                    <div class="text-luxury-gold mb-6">
+                        <i class="fas fa-leaf text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4">Sustainable Design</h3>
+                    <p class="text-gray-600">IGBC Platinum pre-certified with rainwater harvesting, solar power integration, and energy-efficient architecture reducing utility costs by up to 30%.</p>
+                </div>
+                
+                <div class="luxury-card bg-soft-cream p-8 rounded-xl text-center">
+                    <div class="text-luxury-gold mb-6">
+                        <i class="fas fa-users text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4">Exclusive Community</h3>
+                    <p class="text-gray-600">Limited inventory of opulent residences creates an intimate community of like-minded individuals, ensuring privacy and maintaining exclusivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities -->
+    <section id="amenities" class="py-20 bg-soft-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-charcoal mb-4">Exceptional Amenities for Discerning Residents</h2>
+                <div class="gold-divider my-4"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto elegant-text">Curated experiences and facilities that redefine luxury living</p>
+            </div>
+            
+            <div class="mb-16">
+                <div class="relative h-96 overflow-hidden rounded-2xl shadow-2xl gold-border">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/mvkdtcvijm52azr/generated-images/2YSZ8oscMlv1KTedhdiOZ.png" alt="Amenities" class="w-full h-full object-cover parallax">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="luxury-card bg-white p-8 rounded-xl">
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-deep-emerald">Panoramic Golf Views</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Temperature-controlled infinity pool with golf course views</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Fully-equipped gymnasium with personal trainers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Meditation garden and spa facilities</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="luxury-card bg-white p-8 rounded-xl">
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-deep-emerald">Exclusive Club House</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Elegant and luxurious clubhouse spanning 65,000 sq feet</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Peaceful relaxing zones to wind down</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Most luxurious offerings for residents</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="luxury-card bg-white p-8 rounded-xl">
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-deep-emerald">Modern Security</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Multi-tier security system with biometric access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Dedicated concierge services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-luxury-gold mt-1 mr-3"></i>
+                            <span>Smart visitor management system ensuring privacy</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Projects -->
+    <section id="developer" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-charcoal mb-4">Some of L&T's Projects</h2>
+                <div class="gold-divider my-4"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto elegant-text">A legacy of creating iconic landmarks across India's premier locations</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="overflow-hidden rounded-xl shadow-lg luxury-card">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/mvkdtcvijm52azr/b6f12ca95591472bbdaec85778a93f9d/original/Island-Cove_Pearl_Launch.jpg" alt="Island Cove Pearl" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg luxury-card">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/mvkdtcvijm52azr/04c9acf683474ae8bb0ce2bfbdb24f5c/original/crescent-bay-desktop-mastehead-img-1.webp" alt="Crescent Bay" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg luxury-card">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/mvkdtcvijm52azr/6ec45ce95a2948f5b8dd39dfe4ef6ef1/original/Avinya-Enclave.webp" alt="Avinya Enclave" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg luxury-card">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/mvkdtcvijm52azr/b3652112bfa54c188aed491b0681f3e4/original/Elara-Celestia.webp" alt="Elara Celestia" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg luxury-card">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/mvkdtcvijm52azr/7918d27b647242a29650e1908a67d694/original/Evara.webp" alt="Evara" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg luxury-card">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/mvkdtcvijm52azr/3d25b8ffb69242759ff39043ef93f3a1/original/emerald-flats-desktop-mastehead-img-optimized.webp" alt="Emerald Flats" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
+                </div>
+            </div>
+            
+            <div class="mt-16 luxury-card bg-gradient-to-r from-deep-emerald to-charcoal text-white p-12 rounded-2xl">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                        <img src="https://www.lntrealty.com/wp-content/themes/lntrealty/assets/images/brand-logo-desktop.webp" alt="L&T Realty Logo" class="h-24">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-3xl font-serif font-bold mb-6">Developer Credentials</h3>
+                        <p class="text-gray-200 mb-6 elegant-text">L&T Realty, the real estate development arm of the $21 billion Larsen & Toubro conglomerate, brings eight decades of engineering excellence and construction expertise to every project they undertake.</p>
+                        <p class="text-gray-200 elegant-text">With a portfolio of over 70 million square feet of developed real estate across residential, commercial, and retail segments, L&T Realty has established benchmarks for quality, innovation, and timely delivery across India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-deep-emerald to-charcoal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center gap-16">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h2 class="text-4xl font-serif font-bold mb-8">Reserve Your Luxury Residence Today</h2>
+                    <p class="text-xl text-light-gold mb-8 elegant-text">Pre-Launch Window Closing Soon</p>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl mb-8 border border-luxury-gold/20">
+                        <div class="flex items-center">
+                            <div class="mr-4 text-luxury-gold">
+                                <i class="fas fa-file-pdf text-4xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Hon. Supreme Court Order</h4>
+                                <p class="text-light-gold text-sm mb-2">Download Below for more clarity</p>
+                                <a href="#" class="text-luxury-gold text-sm font-medium hover:underline flex items-center">
+                                    L&T Order Copy.pdf (36.2 KB)
+                                    <i class="fas fa-download ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-serif font-semibold mb-6">Complete the form to receive:</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-4 text-luxury-gold"></i>
+                                <span class="text-light-gold">Detailed brochure with floor plans and specifications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-4 text-luxury-gold"></i>
+                                <span class="text-light-gold">Current pre-launch pricing and payment plans</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-4 text-luxury-gold"></i>
+                                <span class="text-light-gold">Virtual tour of sample apartment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-4 text-luxury-gold"></i>
+                                <span class="text-light-gold">Appointment for site visit with our luxury home consultant</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-light-gold elegant-text">Our dedicated relationship managers are available for personalized consultations to help you select the perfect residence matching your lifestyle needs and investment goals.</p>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-2xl shadow-2xl p-10 text-charcoal">
+                        <h3 class="text-3xl font-serif font-bold mb-8 text-center text-deep-emerald">Enquire Now</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div class="relative">
+                                <label for="name" class="block text-charcoal font-medium mb-2 elegant-text">Full Name*</label>
+                                <input type="text" id="name" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold focus:border-transparent transition-all duration-200 elegant-text" required>
+                                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-luxury-gold transition-all duration-500 peer-focus:w-full"></span>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-charcoal font-medium mb-2 elegant-text">Email*</label>
+                                <input type="email" id="email" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold elegant-text" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-charcoal font-medium mb-2 elegant-text">Phone Number*</label>
+                                <input type="tel" id="phone" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold elegant-text" required>
+                            </div>
+                            <div>
+                                <label for="interest" class="block text-charcoal font-medium mb-2 elegant-text">Interested In*</label>
+                                <select id="interest" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold elegant-text" required>
+                                    <option value="">Select Option</option>
+                                    <option value="3bhk">3 BHK Premium</option>
+                                    <option value="4bhk">4 BHK Signature</option>
+                                    <option value="5bhk">5 BHK Opulent</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-charcoal font-medium mb-2 elegant-text">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold elegant-text"></textarea>
+                            </div>
+                            <button type="submit" class="w-full luxury-button text-white py-4 px-5 rounded-xl font-semibold text-lg">Submit Enquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-8 bg-gray-100 text-gray-600 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>© The content of this website is meant to provide information to the readers and is subject to change. This website is just for the purpose of information only and not to be considered as an official website or an offer for sale. This website belongs to the official channel partner of L&T Realty. Information here including project details has been sourced from multiple sources on the best effort basis and all images used are for representational purpose only as artistic renders. By no stretch of imagination, the information on the website shall be construed as an advertisement and/or invitation or offer for sale. Nothing contained herein shall be deemed to constitute legal advice, solicitations or marketing. You are hereby advised to visit the relevant RERA website before taking any decision based on the contents displayed on the website. By using or accessing the website, you agree with the Disclaimer without any qualification or limitation.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-charcoal to-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex justify-between items-start">
+                <div class="mb-10 md:mb-0">
+                    <img src="https://www.lntrealty.com/wp-content/themes/lntrealty/assets/images/brand-logo-desktop.webp" alt="L&T Realty Logo" class="h-12 mb-6">
+                    <p class="text-gray-400 max-w-md elegant-text">Ultra-Luxury Golf View Residences in Noida Sector-128</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-luxury-gold transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-luxury-gold transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-luxury-gold transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-luxury-gold transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div>
+                        <h4 class="text-lg font-serif font-semibold mb-6 text-luxury-gold">Quick Links</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#overview" class="text-gray-400 hover:text-white transition duration-300 elegant-text">Overview</a></li>
+                            <li><a href="#residences" class="text-gray-400 hover:text-white transition duration-300 elegant-text">Residences</a></li>
+                            <li><a href="#amenities" class="text-gray-400 hover:text-white transition duration-300 elegant-text">Amenities</a></li>
+                            <li><a href="#location" class="text-gray-400 hover:text-white transition duration-300 elegant-text">Location</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-serif font-semibold mb-6 text-luxury-gold">Contact</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-phone-alt mr-3 text-luxury-gold mt-1"></i>
+                                <span class="text-gray-400 elegant-text">+91 XXXX XXX XXX</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mr-3 text-luxury-gold mt-1"></i>
+                                <span class="text-gray-400 elegant-text">sales@lntgreenreserve.com</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mr-3 text-luxury-gold mt-1"></i>
+                                <span class="text-gray-400 elegant-text">Noida Sector-128, Uttar Pradesh</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-serif font-semibold mb-6 text-luxury-gold">Business Hours</h4>
+                        <ul class="space-y-2">
+                            <li class="text-gray-400 elegant-text">Monday - Friday: 10AM - 7PM</li>
+                            <li class="text-gray-400 elegant-text">Saturday: 10AM - 6PM</li>
+                            <li class="text-gray-400 elegant-text">Sunday: By Appointment Only</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 L&T Green Reserve. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book Site Visit Modal -->
+    <div id="siteVisitModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-serif font-bold text-charcoal">Book a Site Visit</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-charcoal">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="siteVisitForm" class="space-y-6">
+                <div>
+                    <label for="visitName" class="block text-charcoal font-medium mb-2 elegant-text">Full Name*</label>
+                    <input type="text" id="visitName" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold elegant-text" required>
+                </div>
+                <div>
+                    <label for="visitPhone" class="block text-charcoal font-medium mb-2 elegant-text">Phone Number*</label>
+                    <input type="tel" id="visitPhone" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold elegant-text" required>
+                </div>
+                <div>
+                    <label for="visitDate" class="block text-charcoal font-medium mb-2 elegant-text">Preferred Date*</label>
+                    <input type="date" id="visitDate" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold elegant-text" required>
+                </div>
+                <div>
+                    <label for="visitTime" class="block text-charcoal font-medium mb-2 elegant-text">Preferred Time*</label>
+                    <select id="visitTime" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-luxury-gold elegant-text" required>
+                        <option value="">Select Time</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full luxury-button text-white py-3 px-4 rounded-xl font-semibold">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/919999999999" class="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl hover:bg-[#128C7E] transition-all duration-300 flex items-center justify-center w-16 h-16 group animate-bounce">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span class="absolute -right-2 -top-2 bg-luxury-gold text-white text-xs rounded-full w-5 h-5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">1</span>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your enquiry. Our representative will contact you shortly.');
+            contactForm.reset();
+        });
+         
+        // Site Visit Modal
+        const siteVisitModal = document.getElementById('siteVisitModal');
+        const closeModal = document.getElementById('closeModal');
+        const siteVisitForm = document.getElementById('siteVisitForm');
+        
+        // Open modal when clicking Book a Site Visit button
+        document.querySelector('button[onclick*="siteVisitModal"]').addEventListener('click', function(e) {
+            siteVisitModal.classList.remove('hidden');
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            siteVisitModal.classList.add('hidden');
+        });
+        
+        // Close when clicking outside modal
+        siteVisitModal.addEventListener('click', (e) => {
+            if(e.target === siteVisitModal) {
+                siteVisitModal.classList.add('hidden');
+            }
+        });
+        
+        // Handle form submission
+        siteVisitForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for booking a site visit. Our representative will confirm your appointment shortly.');
+            siteVisitForm.reset();
+            siteVisitModal.classList.add('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
