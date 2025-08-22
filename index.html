@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- EmailJS Library -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <title>L&T Green Reserve: Ultra-Luxury Golf View Residences in Noida Sector 128</title>
     <meta name="description" content="Experience unparalleled luxury at L&T Green Reserve, ultra-luxury golf view residences in Noida Sector 128. Pre-launch pricing with exclusive benefits.">
     <meta name="keywords" content="L&T Green Reserve, luxury apartments Noida, golf view residences, premium real estate, L&T Realty, Noida sector 128, pre-launch offer">
@@ -33,7 +34,7 @@
       "name": "L&T Green Reserve",
       "description": "Ultra-Luxury Golf View Residences in Noida Sector 128",
       "url": "https://www.lntgreenreserve.com",
-      "telephone": "+91-XXXXXXXXXX",
+      "telephone": "+91-7982883556",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Sector 128",
@@ -68,7 +69,11 @@
       ]
     }
     </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Form Handler -->
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -316,9 +321,9 @@
     <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 border-b border-luxury-gold/20">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0">
+                <a class="flex-shrink-0" href="#">
                     <img src="https://www.lntrealty.com/wp-content/themes/lntrealty/assets/images/brand-logo-desktop.webp" alt="L&T Realty Logo" class="h-12">
-                </div>
+                </a>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-2">
                         <a href="#overview" class="nav-link text-gray-700 hover:text-deep-emerald">Overview</a>
@@ -1018,11 +1023,11 @@
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <i class="fas fa-phone-alt mr-3 text-luxury-gold mt-1"></i>
-                                <span class="text-gray-400 elegant-text">+91 XXXX XXX XXX</span>
+                                <span class="text-gray-400 elegant-text">+91 7982 882 556</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-envelope mr-3 text-luxury-gold mt-1"></i>
-                                <span class="text-gray-400 elegant-text">sales@lntgreenreserve.com</span>
+                                <span class="text-gray-400 elegant-text">propulenz@gmail.com</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-map-marker-alt mr-3 text-luxury-gold mt-1"></i>
@@ -1087,82 +1092,214 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/919999999999" class="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl hover:bg-[#128C7E] transition-all duration-300 flex items-center justify-center w-16 h-16 group ">
+        <a href="https://wa.me/917982883556" class="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl hover:bg-[#128C7E] transition-all duration-300 flex items-center justify-center w-16 h-16 group ">
             <i class="fab fa-whatsapp text-2xl"></i>
             <span class="absolute -right-2 -top-2 bg-luxury-gold text-white text-xs rounded-full w-5 h-5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">1</span>
         </a>
     </div>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your enquiry. Our representative will contact you shortly.');
-            contactForm.reset();
-        });
-         
-        // Site Visit Modal
-        const siteVisitModal = document.getElementById('siteVisitModal');
-        const closeModal = document.getElementById('closeModal');
-        const siteVisitForm = document.getElementById('siteVisitForm');
-        
-        // Open modal when clicking Book a Site Visit button
-        document.querySelector('button[onclick*="siteVisitModal"]').addEventListener('click', function(e) {
-            siteVisitModal.classList.remove('hidden');
-        });
-        
-        // Close modal
-        closeModal.addEventListener('click', () => {
-            siteVisitModal.classList.add('hidden');
-        });
-        
-        // Close when clicking outside modal
-        siteVisitModal.addEventListener('click', (e) => {
-            if(e.target === siteVisitModal) {
-                siteVisitModal.classList.add('hidden');
+            document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.getElementById('overlay');
+            const closeNav = document.querySelector('.close-nav');
+            
+            function openMobileNav() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
             }
-        });
-        
-        // Handle form submission
-        siteVisitForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for booking a site visit. Our representative will confirm your appointment shortly.');
-            siteVisitForm.reset();
-            siteVisitModal.classList.add('hidden');
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if(!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
+            
+            function closeMobileNav() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            
+            mobileNavToggle.addEventListener('click', openMobileNav);
+            closeNav.addEventListener('click', closeMobileNav);
+            overlay.addEventListener('click', closeMobileNav);
+            
+            // Close mobile nav when clicking on links
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileNav);
+            });
+            
+            // Back to top button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
                 }
             });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Property card hover effect
+            const propertyCards = document.querySelectorAll('.property-card');
+            
+            propertyCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.08)';
+                });
+            });
+            
+            // Button hover effects
+            const buttons = document.querySelectorAll('.btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    if (this.classList.contains('btn-primary') || this.classList.contains('btn-secondary')) {
+                        this.style.transform = 'translateY(-2px)';
+                        this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
+                    }
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    if (this.classList.contains('btn-primary') || this.classList.contains('btn-secondary')) {
+                        this.style.transform = 'translateY(0)';
+                        this.style.boxShadow = 'none';
+                    }
+                });
+            });
+            
+            // Login/Signup buttons
+            const authButtons = document.querySelectorAll('.auth-buttons button, .mobile-auth-buttons button');
+            
+            authButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const isLogin = this.textContent.toLowerCase().includes('login');
+                    alert(`${isLogin ? 'Login' : 'Signup'} feature would open a modal in the full application.`);
+                });
+            });
+            
+            // Contact form functionality
+            const contactForm = document.getElementById('propertyContactForm');
+            const successModal = document.getElementById('successModal');
+            const modalClose = document.getElementById('modalClose');
+            const contactButtons = document.querySelectorAll('.contact-btn');
+            const propertyNameField = document.getElementById('propertyName');
+            
+            // Set property name when contact button is clicked
+            contactButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const propertyName = this.getAttribute('data-property');
+                    propertyNameField.value = propertyName;
+                    
+                    // Scroll to contact form
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Auto-fill message with property name
+                    document.getElementById('message').value = `I'm interested in the ${propertyName}. Please provide more information.`;
+                });
+            });
+            
+            // Form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    property: formData.get('property'),
+                    message: formData.get('message')
+                };
+                
+                // In a real application, you would send this data to a server
+                // For this example, we'll simulate a successful submission
+                
+                // Show success message
+                successModal.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Reset form
+                contactForm.reset();
+            });
+            
+            // Close modal
+            modalClose.addEventListener('click', function() {
+                successModal.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close modal when clicking outside
+            overlay.addEventListener('click', function() {
+                successModal.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            
         });
+        document.addEventListener("DOMContentLoaded", function () {
+  const dateInput = document.getElementById("visitDate");
+  const timeSelect = document.getElementById("visitTime");
+
+  // prevent past date selection
+  if (dateInput) {
+    const today = new Date();
+    dateInput.min = today.toISOString().split("T")[0];
+  }
+
+  // update available time slots
+  function updateTimeSlots() {
+    const selectedDate = new Date(dateInput.value);
+    const now = new Date();
+
+    [...timeSelect.options].forEach(opt => {
+      if (!opt.value) return; // skip placeholder
+      opt.disabled = false;
+
+      // Parse option time
+      const [hourPart, modifier] = opt.value.split(" ");
+      let [h, m] = hourPart.split(":").map(Number);
+      if (modifier === "PM" && h < 12) h += 12;
+      if (modifier === "AM" && h === 12) h = 0;
+
+      const optionTime = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), selectedDate.getDate(), h, m);
+
+      // Disable if in the past
+      if (selectedDate.toDateString() === now.toDateString() && optionTime <= now) {
+        opt.disabled = true;
+      }
+    });
+
+    // If no valid options → move to next day
+    const validOption = [...timeSelect.options].find(opt => opt.value && !opt.disabled);
+    if (!validOption) {
+      const nextDay = new Date();
+      nextDay.setDate(now.getDate() + 1);
+      dateInput.value = nextDay.toISOString().split("T")[0];
+      updateTimeSlots();
+    }
+  }
+
+  if (dateInput && timeSelect) {
+    dateInput.addEventListener("change", updateTimeSlots);
+    timeSelect.addEventListener("focus", updateTimeSlots);
+  }
+});
     </script>
+    <script src="form-handler.js"></script>
 </body>
 </html>
