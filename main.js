@@ -82,6 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Auto-open Site Visit Modal after 30s
+// =====================
+setTimeout(function () {
+    if (siteVisitModal && siteVisitModal.classList.contains("hidden")) {
+        siteVisitModal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+    }
+}, 1000); // 1000 ms = 1 second
   // =====================
   // Mobile Navigation
   // =====================
