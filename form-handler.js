@@ -1,6 +1,7 @@
 // ✅ Initialize EmailJS
 (function () {
-  emailjs.init("MlLsF1ANcXgkTiyry"); // replace with your EmailJS public key
+//   emailjs.init("MlLsF1ANcXgkTiyry"); // replace with your EmailJS public key
+emailjs.init("service_8f64djg"); // replace with your EmailJS public key
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -100,6 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
   /* -------------------------
      Site Visit Booking Form
   ------------------------- */
+//testing//
+  const templateId = "template_irswkkf";
+  const serviceId = "service_8f64djg";
+//production//
+//   const templateId = "template_3k57i48";
+//   const serviceId = "service_1cgyw69";
   const siteVisitForm = document.getElementById("siteVisitForm");
   if (siteVisitForm) {
     siteVisitForm.addEventListener("submit", function (e) {
@@ -113,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       emailjs
-        .send("service_1cgyw69", "template_3k57i48", templateParams)
+        .send(serviceId, templateId, templateParams)
         .then(
           function () {
             alert(
@@ -147,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       emailjs
-        .send("service_1cgyw69", "template_zesri0f", templateParams)
+        .send(serviceId, templateId, templateParams)
         .then(
           function () {
             alert("✅ Thank you! Your enquiry has been sent.");
